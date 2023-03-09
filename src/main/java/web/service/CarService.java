@@ -4,8 +4,8 @@ import web.model.Car;
 
 import java.util.List;
 
-public class CarService {
-    public static int getTotalFromCarsList(List<Car> car) {
-        return car.size();
-    }
+public interface CarService {
+    public  int getTotalFromCarsList(List<Car> car);
+    public List<Car> getFiveCars();
+    public List<Car> getCountCars(Integer count, List<Car> carList);
 }
