@@ -22,11 +22,8 @@ public class CarController {
     }
 
     @GetMapping(value = "/car")
-public static String carList(@RequestParam(required = false) Integer count, ModelMap model) {
-        CarServiceImpl carService = new CarServiceImpl();
-        var carList = carService.getCountCars(count, carService.getFiveCars());
-        model.addAttribute("carlist", carList);
+    public static String carList(@RequestParam(required = false) Integer count, ModelMap model) {
+        model.addAttribute("carlist", CarServiceImpl.getCars(count));
         return "cars";
     }
-
 }
