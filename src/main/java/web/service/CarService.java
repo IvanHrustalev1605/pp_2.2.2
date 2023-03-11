@@ -5,7 +5,5 @@ import web.model.Car;
 import java.util.List;
 
 public interface CarService {
-    public static List<Car> getCars(Integer count) {
-        return null;
-    }
+    public abstract List<Car> getCars(Integer count);
 }
